@@ -1,1 +1,1 @@
-# Tips_Calculater
+# Tips_Calculator
