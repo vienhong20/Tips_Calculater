@@ -1,45 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Tips Calculator</title>
-    <!--Boostrap-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <!--Jumbotron-->
-      <div class="jumbotron">
-        <h1 class="text-center">TIPS CALCULATOR</h1>
-      </div>
-      <!--Main-->
-      <form name="Calculator">
-        Service : <input type="text" name="service" />
-        <br />
-        Tips :
-        <br />
-        <div class="btn-group btn-group-vertical btn-group-lg">
-          <button type="button" class="btn btn-primary" id="15%">15%</button>
+<div id="container">
+  <h1>Tip Calculator</h1>
+  <div id="calculator">
+    <form>
+      <p>How much was your bill?</p>
+      <p>$ <input id="billamt" type="text" placeholder="Bill Amount" /></p>
 
-          <button type="button" class="btn btn-primary" id="20%">20%</button>
+      <p>How was your service?</p>
+      <p>
+        <select id="serviceQual">
+          <option disabled selected value="0">-- Choose an Option --</option>
+          <option value="0.3">30&#37; &#45; Outstanding</option>
+          <option value="0.2">20&#37; &#45; Good</option>
+          <option value="0.15">15&#37; &#45; It was OK</option>
+          <option value="0.1">10&#37; &#45; Bad</option>
+          <option value="0.05">5&#37; &#45; Terrible</option>
+        </select>
+      </p>
+    </form>
 
-          <button type="button" class="btn btn-primary" id="25%">25%</button>
-        </div>
-        <br />
-        <!--Each of the % button will display the totals-->
-        Totals : <input type="text" name="totals" />
-        <br />
-        Number of people on table: <input type="text" name="people" />
-        <br />
-        <button type="button" class="btn btn-primary" id="split">SPLIT</button>
-      </form>
-    </div>
-  </body>
-</html>
+    <p>How many people are sharing the bill?</p>
+    <input id="peopleamt" type="text" placeholder="Number of People" /> people
+    <button type="button" id="calculate">Calculate!</button>
+  </div>
+  <!--calculator end-->
+  <div id="totalTip">
+    <sup>$</sup><span id="tip">0.00</span>
+    <small id="each">each</small>
+  </div>
+  <!--totalTip end-->
+</div>
+<!--container end-->
+
+<script type="text/javascript" src="logic.js"></script>
