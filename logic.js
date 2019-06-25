@@ -20,7 +20,7 @@ function calculateTip() {
   //Calculate tip
   var total = (billAmt * serviceQual) / numOfPeople;
   //round to 2 decimal
-  total = Math.round("total * 100") / 100;
+  total = Math.round(total * 100) / 100;
   //This line will allow it to always have 2 digits after decimal point
   total = total.toFixed(2);
   //Display the tip
